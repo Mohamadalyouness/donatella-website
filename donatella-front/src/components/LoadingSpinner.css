@@ -1,0 +1,105 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  min-height: 200px;
+}
+
+.loading-container.small {
+  padding: 1.5rem 1rem;
+  min-height: 100px;
+}
+
+.loading-container.large {
+  padding: 5rem 2rem;
+  min-height: 400px;
+}
+
+.chocolate-loader {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.chocolate-bar {
+  width: 12px;
+  height: 50px;
+  background: linear-gradient(180deg, #d6b16a 0%, #b88a2e 50%, #8b6914 100%);
+  border-radius: 6px;
+  animation: chocolateWave 1.2s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(214, 177, 106, 0.4);
+}
+
+.chocolate-bar.bar-1 {
+  animation-delay: 0s;
+}
+
+.chocolate-bar.bar-2 {
+  animation-delay: 0.1s;
+}
+
+.chocolate-bar.bar-3 {
+  animation-delay: 0.2s;
+}
+
+.chocolate-bar.bar-4 {
+  animation-delay: 0.3s;
+}
+
+.chocolate-bar.bar-5 {
+  animation-delay: 0.4s;
+}
+
+@keyframes chocolateWave {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    opacity: 0.7;
+  }
+  20% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.loading-text {
+  margin-top: 1.5rem;
+  color: #fff7ed;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Small size adjustments */
+.loading-container.small .chocolate-bar {
+  width: 8px;
+  height: 35px;
+}
+
+.loading-container.small .loading-text {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* Large size adjustments */
+.loading-container.large .chocolate-bar {
+  width: 16px;
+  height: 70px;
+}
+
+.loading-container.large .loading-text {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}

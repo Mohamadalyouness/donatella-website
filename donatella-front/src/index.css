@@ -1,0 +1,47 @@
+* {
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Lora", Georgia, serif;
+  background: #c1a47e;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Mobile font size adjustments */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.page {
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a,
+button {
+  cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'>\
+<text x='0' y='24' font-size='24'>🍫</text>\
+</svg>") 8 8, pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+div {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

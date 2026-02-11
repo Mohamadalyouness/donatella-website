@@ -1,0 +1,214 @@
+.about-page {
+  min-height: 100vh;
+  background: #c1a47e;
+  color: #1c120c;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: #6b4e0f;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* Hero: Logo left, intro right */
+.about-hero {
+  padding: 4rem 2rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.about-logo-wrap {
+  flex-shrink: 0;
+}
+
+.about-logo {
+  height: 140px;
+  width: auto;
+  display: block;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.about-intro {
+  flex: 1;
+  min-width: 280px;
+  animation: fadeInUp 0.6s ease-out 0.15s both;
+}
+
+.about-intro h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.25rem;
+  color: #1c120c;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.about-intro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2a1a12;
+  margin: 0;
+}
+
+/* Chef section: Text left, photo right */
+.about-chef {
+  padding: 3rem 2rem 5rem;
+  background: rgba(139, 105, 20, 0.15);
+}
+
+.about-chef-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-chef-text {
+  flex: 1;
+  min-width: 280px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.about-chef-text h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.9rem;
+  color: #6b4e0f;
+  margin: 0 0 1rem;
+}
+
+.about-chef-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2a1a12;
+  margin: 0 0 1rem;
+}
+
+.about-chef-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-chef-photo {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.about-chef-photo img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-hero,
+  .about-chef {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .about-hero-content,
+  .about-chef-content {
+    gap: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 1.5rem 4rem;
+  }
+  
+  .about-chef {
+    padding: 2rem 1.5rem 4rem;
+  }
+  
+  .about-hero-content,
+  .about-chef-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-chef-content {
+    flex-direction: column-reverse;
+  }
+
+  .about-logo {
+    height: 100px;
+  }
+
+  .about-intro h1 {
+    font-size: 1.75rem;
+  }
+  
+  .about-chef-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .about-intro p,
+  .about-chef-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 2rem 1rem 3rem;
+  }
+  
+  .about-chef {
+    padding: 2rem 1rem 3rem;
+  }
+  
+  .about-logo {
+    height: 80px;
+  }
+  
+  .about-intro h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-chef-text h2 {
+    font-size: 1.4rem;
+  }
+  
+  .about-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+  
+  .about-chef-photo {
+    max-width: 100%;
+  }
+  
+  .about-chef-photo img {
+    height: 250px;
+  }
+}
