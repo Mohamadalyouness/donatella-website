@@ -13,62 +13,79 @@
   text-transform: uppercase;
 }
 
-/* Hero: Logo left, intro right */
 .about-hero {
-  padding: 4rem 2rem 5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.about-hero-content {
+  padding: 4.5rem 1.5rem 4rem;
+  background: radial-gradient(circle at top left, #e9d0a6 0, #c1a47e 40%, #b18d63 100%);
   display: flex;
-  align-items: center;
-  gap: 4rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
-.about-logo-wrap {
-  flex-shrink: 0;
+.about-hero-inner {
+  max-width: 840px;
 }
 
-.about-logo {
+.about-hero-logo {
   height: 140px;
   width: auto;
   display: block;
+  margin: 0 auto 1.5rem;
   animation: fadeInUp 0.6s ease-out;
 }
 
-.about-intro {
-  flex: 1;
-  min-width: 280px;
-  animation: fadeInUp 0.6s ease-out 0.15s both;
-}
-
-.about-intro h1 {
+.about-hero h1 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   color: #1c120c;
   margin: 0 0 1rem;
   line-height: 1.2;
 }
 
-.about-intro p {
+.about-hero p {
   font-size: 1.05rem;
   line-height: 1.7;
+  color: #2a1a12;
+  margin: 0 0 0.75rem;
+}
+
+/* Story section */
+.about-story {
+  padding: 3.5rem 2rem 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-section-header h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+  color: #1c120c;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.about-story-grid p {
+  font-size: 1rem;
+  line-height: 1.8;
   color: #2a1a12;
   margin: 0;
 }
 
-/* Chef section: Text left, photo right */
+/* Chef section */
 .about-chef {
-  padding: 3rem 2rem 5rem;
+  padding: 3.5rem 2rem 4.5rem;
   background: rgba(139, 105, 20, 0.15);
 }
 
-.about-chef-content {
+.about-chef-layout {
   display: flex;
-  align-items: center;
-  gap: 4rem;
+  align-items: flex-start;
+  gap: 3rem;
   max-width: 1100px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -98,10 +115,75 @@
   margin-bottom: 0;
 }
 
+.about-chef-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.about-chef-badges span {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(107, 78, 15, 0.35);
+  background: rgba(255, 247, 237, 0.4);
+}
+
+.about-chef-intro {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #2a1a12;
+  margin-bottom: 1.2rem;
+}
+
+.about-chef-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid rgba(107, 78, 15, 0.35);
+}
+
+.about-chef-timeline li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.about-chef-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0.45rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #6b4e0f;
+  box-shadow: 0 0 0 3px rgba(107, 78, 15, 0.2);
+}
+
+.about-chef-timeline-year {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b4e0f;
+  margin-bottom: 0.2rem;
+}
+
+.about-chef-timeline p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
 .about-chef-photo {
   flex-shrink: 0;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
@@ -110,8 +192,9 @@
 
 .about-chef-photo img {
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -128,14 +211,14 @@
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .about-hero,
+  .about-story,
   .about-chef {
     padding-left: 2rem;
     padding-right: 2rem;
   }
   
-  .about-hero-content,
-  .about-chef-content {
+  .about-story-grid,
+  .about-chef-layout {
     gap: 3rem;
   }
 }
@@ -143,28 +226,32 @@
 /* Mobile */
 @media (max-width: 768px) {
   .about-hero {
-    padding: 3rem 1.5rem 4rem;
+    padding: 3.5rem 1.25rem 3.25rem;
   }
-  
+
+  .about-story {
+    padding: 3rem 1.5rem 3rem;
+  }
+
   .about-chef {
-    padding: 2rem 1.5rem 4rem;
+    padding: 3rem 1.5rem 3.5rem;
   }
   
-  .about-hero-content,
-  .about-chef-content {
+  .about-story-grid,
+  .about-chef-layout {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .about-chef-content {
-    flex-direction: column-reverse;
+  .about-story-grid {
+    display: block;
   }
 
-  .about-logo {
-    height: 100px;
+  .about-hero-logo {
+    height: 120px;
   }
 
-  .about-intro h1 {
+  .about-hero h1 {
     font-size: 1.75rem;
   }
   
@@ -180,18 +267,18 @@
 
 @media (max-width: 480px) {
   .about-hero {
-    padding: 2rem 1rem 3rem;
+    padding: 3rem 1rem 2.5rem;
   }
   
   .about-chef {
     padding: 2rem 1rem 3rem;
   }
   
-  .about-logo {
-    height: 80px;
+  .about-hero-logo {
+    height: 100px;
   }
   
-  .about-intro h1 {
+  .about-hero h1 {
     font-size: 1.5rem;
   }
   

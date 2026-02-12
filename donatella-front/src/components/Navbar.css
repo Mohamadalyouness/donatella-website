@@ -291,13 +291,13 @@
   }
 
   .navbar-logo-img {
-    height: 60px;
+    height: 72px;
   }
 
   .menu-btn {
     display: flex;
     margin-left: auto;
-    margin-right: 0.5rem;
+    margin-right: 1.25rem;
   }
 
   /* Hide desktop Products dropdown on mobile */
@@ -382,7 +382,7 @@
 
 @media (max-width: 480px) {
   .navbar-logo-img {
-    height: 52px;
+    height: 64px;
   }
 
   .nav-links {
